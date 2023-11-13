@@ -40,9 +40,11 @@
       }
         <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
           <div class="">
-  
+            @@if (!context.logoBoth) {
+              @@if (!context.logoLight) {
                 <a href="@@webRoot/index.html" class="transition-none d-none d-lg-flex"><img style="width: 100px;" src="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){ProUnitylogo}.png" srcset="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){ProUnitylogo}png 2x" alt="" /></a>
-  
+              }
+            }
             @@if (context.logoBoth) {
               <a href="@@webRoot/index.html" class="transition-none d-none d-lg-flex"><img style="width: 100px;" class="logo-dark" src="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){ProUnitylogo}.png" srcset="@@webRoot/assets/img/@@if(context.logoAlt){@@logoAlt}@@if(!context.logoAlt){ProUnitylogo}.png 2x" alt="" />
               <img style="width: 100px;" class="logo-light" src="@@webRoot/assets/img/ProUnitylogo.png" srcset="@@webRoot/assets/img/ProUnitylogo.png 2x" alt="" /></a>
